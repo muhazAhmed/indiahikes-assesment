@@ -1,4 +1,3 @@
-import { fetchCurrentTheme } from "@/lib/utils";
 import React, { FC } from "react";
 
 const Button: FC<CustomButtonProps> = ({
