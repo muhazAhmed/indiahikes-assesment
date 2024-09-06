@@ -20,7 +20,7 @@ const LoginWarning: FC<WarningProps> = ({ modalState }) => {
             <br />
           </span>
           We have shifted to a new dashboard. If you are a registered trekker,
-          please use your existing email id and click "forgot password." We will
+          please use your existing email id and click &quot;forgot password.&quot; We will
           re-authenticate your account. If you are a new user, please create a
           new account
         </p>

@@ -4,7 +4,7 @@ import { FaUserAlt, FaCity, FaUniversity, FaPhoneAlt } from "react-icons/fa";
 import { MdOutlineEmail, MdOutlineWork } from "react-icons/md";
 import { BsGenderAmbiguous, BsCalendarDate } from "react-icons/bs";
 import { AiOutlineLineHeight } from "react-icons/ai";
-import { useToast } from "@/lib/utils";
+import { Toast } from "@/lib/utils";
 import { heightDropDown } from "@/lib/registerFormFields";
 import {
   validateStep1,
@@ -32,6 +32,11 @@ const RegisterPage: FC<RegisterProps> = ({ toggleState }) => {
     });
   };
 
+  const handleSubmit = () => {
+    Toast("Registration completed", "success")
+    console.log(formData);
+  };
+
   const nextStep = () => {
     let stepErrors = {};
     switch (step) {
@@ -53,7 +58,7 @@ const RegisterPage: FC<RegisterProps> = ({ toggleState }) => {
       setStep((prev) => prev + 1);
     } else {
       Object.values(stepErrors).forEach((errorMessage: any) => {
-        useToast(errorMessage, "error");
+        Toast(errorMessage, "error");
       });
     }
   };
@@ -249,15 +254,10 @@ const RegisterPage: FC<RegisterProps> = ({ toggleState }) => {
         </button>
         <button
           type="button"
-          onClick={nextStep}
-          className={`p-2 px-8 rounded-full ${
-            step === 4
-              ? "bg-gray-300 text-black cursor-not-allowed"
-              : "bg-blue-500 text-white cursor-pointer"
-          }`}
-          disabled={step === 4}
+          onClick={step === 4 ? handleSubmit : nextStep}
+          className={`p-2 px-8 rounded-full bg-blue-500 text-white cursor-pointer`}
         >
-          Next
+          {step === 4 ? "Submit" : "Next"}
         </button>
       </div>
 

@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { CustomButtonProps } from "@/lib/props";
 
 const Button: FC<CustomButtonProps> = ({
   label,

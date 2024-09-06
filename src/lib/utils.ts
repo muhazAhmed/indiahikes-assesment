@@ -28,7 +28,7 @@ export const useLocalStorage = (key: string) => {
     return items ? JSON.parse(items) : null;
 };
 
-export const useToast = (
+export const Toast = (
     name: string,
     type: "success" | "error",
     duration?: number

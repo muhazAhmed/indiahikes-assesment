@@ -50,7 +50,7 @@ const LoginPage: FC<LoginProps> = ({ toggleState }) => {
       </form>
 
       <p>
-        Don't have an account?{" "}
+        Don&apos;t have an account?{" "}
         <button onClick={toggleState} className="text-secondary">
           Register here
         </button>

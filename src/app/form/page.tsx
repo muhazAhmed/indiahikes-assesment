@@ -16,6 +16,7 @@ const Form = () => {
   const [toggleForm, setToggleForm] = useState<"login" | "register">("login");
   const [isInfoClicked, setInfoClicked] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
+  setLoading
 
   return (
     <div className="w-full h-[100vh] flex items-center justify-center relative">
@@ -68,7 +69,7 @@ const Form = () => {
         )}
       </div>
       <div className="h-full flex items-center justify-center">
-        <Image src={SVG} alt="Image" width={400} />
+        <Image src={SVG} alt="Image" width={400} priority />
       </div>
     </div>
   );

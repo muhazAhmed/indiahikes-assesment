@@ -6,3 +6,7 @@ interface CustomButtonProps {
     style?: React.CSSProperties
     buttonType?: "button" | "reset" | "submit"
 }
+
+export type {
+    CustomButtonProps,
+}
