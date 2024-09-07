@@ -47,3 +47,8 @@ export const validateStep4 = (data: FormData) => {
 export const isFormValid = (errors: FormData) => {
     return Object.keys(errors).length === 0;
 };
+
+export const validEmail = (email: string) => {
+    if (typeof email !== "undefined" && !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) return true;
+    return false;
+};
