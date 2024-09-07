@@ -7,6 +7,16 @@ interface CustomButtonProps {
     buttonType?: "button" | "reset" | "submit"
 }
 
+interface LoginProps {
+    toggleState: any;
+    setLoading: (value: boolean) => void
+}
+
+interface RegisterProps {
+    toggleState: any;
+    setLoading: (value: boolean) => void
+}
+
 export type {
-    CustomButtonProps,
+    CustomButtonProps, LoginProps, RegisterProps
 }

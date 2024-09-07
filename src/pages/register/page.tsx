@@ -14,10 +14,7 @@ import {
   isFormValid,
   FormData,
 } from "@/lib/FormValidation";
-
-interface RegisterProps {
-  toggleState: any;
-}
+import { RegisterProps } from "@/lib/props";
 
 const RegisterPage: FC<RegisterProps> = ({ toggleState }) => {
   const [step, setStep] = useState<number>(1);

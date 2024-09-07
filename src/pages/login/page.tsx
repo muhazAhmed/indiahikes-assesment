@@ -3,10 +3,7 @@ import React, { FC } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaFingerprint } from "react-icons/fa";
 import Button from "@/components/Button";
-
-interface LoginProps {
-  toggleState: any;
-}
+import { LoginProps } from "@/lib/props";
 
 const LoginPage: FC<LoginProps> = ({ toggleState }) => {
   return (
