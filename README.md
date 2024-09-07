@@ -44,4 +44,8 @@ https://indiahikes.netlify.app/
 
 <p>Visit http://localhost:3000 to view the project locally.</p><br></br>
 
+<h3>Demo login</h3>
+<h5>Email: eve.holt@reqres.in<h5>
+<h5>Password: cityslicka<h5>
+
 <h6>Developed by: Muhaz Ahmed</h6>

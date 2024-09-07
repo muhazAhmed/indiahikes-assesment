@@ -1,4 +1,4 @@
 export const ServerVariables = {
-    loginUser: "",
-    registerUser: ""
+    loginUser: "/login",
+    registerUser: "/register"
 }

@@ -6,19 +6,26 @@ import Button from "@/components/Button";
 import { LoginInputs, LoginProps } from "@/lib/props";
 import { Toast } from "@/lib/utils";
 import { validEmail } from "@/lib/FormValidation";
+import { postMethodAPI } from "@/lib/api";
+import { ServerVariables } from "@/lib/ServerVariables";
 
-const LoginPage: FC<LoginProps> = ({ toggleState }) => {
+const LoginPage: FC<LoginProps> = ({ toggleState, setLoading }) => {
   const [inputs, setInputs] = useState<LoginInputs>({
     email: "",
     password: "",
   });
-  const handleLogin = (e: React.FormEvent) => {
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputs?.email) return Toast("Email is required", "error");
     if (validEmail(inputs?.email))
       return Toast("Please enter a valid email", "error");
     if (!inputs?.password) return Toast("Password is required", "error");
-    return Toast("Login success", "success");
+    const res = await postMethodAPI(
+      ServerVariables?.loginUser,
+      inputs,
+      setLoading
+    );
+    res?.status === 200 && Toast("Login success", "success");
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
