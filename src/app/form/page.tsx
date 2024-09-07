@@ -16,7 +16,6 @@ const Form = () => {
   const [toggleForm, setToggleForm] = useState<"login" | "register">("login");
   const [isInfoClicked, setInfoClicked] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
-  setLoading
 
   return (
     <div className="w-full h-[100vh] flex items-center justify-center relative">
@@ -63,9 +62,12 @@ const Form = () => {
           </button>
         </div>
         {toggleForm === "login" ? (
-          <LoginPage toggleState={() => setToggleForm("register")} />
+          <LoginPage
+            toggleState={() => setToggleForm("register")}
+            setLoading={setLoading}
+          />
         ) : (
-          <RegisterPage toggleState={setToggleForm} />
+          <RegisterPage toggleState={setToggleForm} setLoading={setLoading} />
         )}
       </div>
       <div className="h-full flex items-center justify-center">
