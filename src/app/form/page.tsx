@@ -23,7 +23,7 @@ const Form = () => {
       <div className="absolute top-3 right-2">
         <ThemeToggle />
       </div>
-      <div className="flex flex-col items-center justify-center w-[40%] h-[70%] gap-6 border-2 border-primary p-5 rounded-2xl">
+      <div className="flex flex-col items-center justify-center xl:w-96 lg:w-80 sm:w-full h-[70%] gap-6 border-2 border-primary p-5 rounded-2xl">
         <h1 className="text-[30px]">
           India<span className="text-primary">Hikes</span>
         </h1>
@@ -70,7 +70,7 @@ const Form = () => {
           <RegisterPage toggleState={setToggleForm} setLoading={setLoading} />
         )}
       </div>
-      <div className="h-full flex items-center justify-center">
+      <div className="form-image h-full flex items-center justify-center">
         <Image src={SVG} alt="Image" width={400} priority />
       </div>
     </div>
