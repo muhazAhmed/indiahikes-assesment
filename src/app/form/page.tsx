@@ -10,6 +10,7 @@ import Loader from "@/components/Loader";
 import LoginWarning from "@/components/LoginWarning";
 import { useTheme } from "@/lib/ThemeContext";
 import classNames from "classnames";
+import { motion } from "framer-motion";
 
 const Form = () => {
   const { theme } = useTheme();
@@ -23,7 +24,13 @@ const Form = () => {
       <div className="absolute top-3 right-2">
         <ThemeToggle />
       </div>
-      <div className="flex flex-col items-center justify-center xl:w-96 lg:w-80 sm:w-full h-[70%] gap-6 border-2 border-primary p-5 rounded-2xl">
+      <motion.div
+        className="flex flex-col items-center justify-center xl:w-96 lg:w-80 sm:w-full h-[70%] gap-6 border-2 border-primary p-5 rounded-2xl"
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        whileHover={{ scale: 1.04 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+      >
         <h1 className="text-[30px]">
           India<span className="text-primary">Hikes</span>
         </h1>
@@ -69,7 +76,7 @@ const Form = () => {
         ) : (
           <RegisterPage toggleState={setToggleForm} setLoading={setLoading} />
         )}
-      </div>
+      </motion.div>
       <div className="form-image h-full flex items-center justify-center">
         <Image src={SVG} alt="Image" width={400} priority />
       </div>
