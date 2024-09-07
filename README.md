@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# IndiaHikes
 
-## Getting Started
+<p>This project redesigns the IndiaHikes login/registration page, developed using Next.js, Tailwind CSS, and other libraries like Framer Motion, React Icons, and react-hot-toast for better user experience and responsiveness.</p>
 
-First, run the development server:
+## Demo
+https://indiahikes.netlify.app/
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Screenshots
+<h6>Home</h6>
+![image](https://github.com/user-attachments/assets/2fec37ef-cbf6-4bce-b589-f2edc72fc104)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h6>Form</h6>
+![image](https://github.com/user-attachments/assets/c67d9f66-8cf6-4bc1-af35-7111048fe3c9)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<h6>Light Theme</h6>
+![image](https://github.com/user-attachments/assets/0faf3547-2b69-433b-a9ea-124a8fc0ac00)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
+<ul>
+  <li><strong>Responsive Design:</strong> Mobile-first approach with Tailwind CSS.</li>
+  <li><strong>Validation:</strong> Both login and register pages include required field validation and email regex validation.</li>
+  <li><strong>Dark/Light Theme Toggle:</strong> Users can toggle between dark and light themes.</li>
+  <li><strong>Animations:</strong> Smooth animations using Framer Motion.</li>
+  <li><strong>Toast Notifications:</strong> Error and success notifications using react-hot-toast.</li>
+  <li><strong>Multi-step Registration:</strong> User-friendly multi-step registration form.</li>
+</ul>
 
-## Learn More
+## Setup
+<p>To get started locally, follow these steps:</p>
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
+  <li>Make sure you have Node.js installed (>=14.x).</li>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
+<li>Clone the repository: </li>
+<code>git clone https://github.com/yourusername/indiahikes-assessment.git</code><br></br>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+<li>Navigate into the project directory: </li>
+<code>cd indiahikes-assessment</code><br></br>
 
-## Deploy on Vercel
+<li>Install the dependencies: </li>
+<code>npm install</code><br></br>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<li>Running the Development Server: </li>
+<code>npm run dev</code><br></br>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<p>Visit http://localhost:3000 to view the project locally.</p><br></br>
+
+<h6>Developed by: Muhaz Ahmed</h6>
