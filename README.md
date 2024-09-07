@@ -6,13 +6,11 @@
 https://indiahikes.netlify.app/
 
 ## Screenshots
-<h6>Home</h6>
+
 ![image](https://github.com/user-attachments/assets/2fec37ef-cbf6-4bce-b589-f2edc72fc104)
 
-<h6>Form</h6>
 ![image](https://github.com/user-attachments/assets/c67d9f66-8cf6-4bc1-af35-7111048fe3c9)
 
-<h6>Light Theme</h6>
 ![image](https://github.com/user-attachments/assets/0faf3547-2b69-433b-a9ea-124a8fc0ac00)
 
 ## Features
