@@ -17,6 +17,11 @@ interface RegisterProps {
     setLoading: (value: boolean) => void
 }
 
+interface LoginInputs {
+    email: string;
+    password: string;
+}
+
 export type {
-    CustomButtonProps, LoginProps, RegisterProps
+    CustomButtonProps, LoginProps, RegisterProps, LoginInputs
 }
