@@ -1,11 +1,33 @@
 "use client";
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
 import { FaFingerprint } from "react-icons/fa";
 import Button from "@/components/Button";
-import { LoginProps } from "@/lib/props";
+import { LoginInputs, LoginProps } from "@/lib/props";
+import { Toast } from "@/lib/utils";
+import { validEmail } from "@/lib/FormValidation";
 
 const LoginPage: FC<LoginProps> = ({ toggleState }) => {
+  const [inputs, setInputs] = useState<LoginInputs>({
+    email: "",
+    password: "",
+  });
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!inputs?.email) return Toast("Email is required", "error");
+    if (validEmail(inputs?.email))
+      return Toast("Please enter a valid email", "error");
+    if (!inputs?.password) return Toast("Password is required", "error");
+    return Toast("Login success", "success");
+  };
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setInputs((prev: LoginInputs) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
   return (
     <div className="flex flex-col items-center gap-8">
       <form className="flex flex-col items-center gap-3">
@@ -18,6 +40,7 @@ const LoginPage: FC<LoginProps> = ({ toggleState }) => {
             placeholder="Enter your email"
             required
             className="bg-transparent outline-none"
+            onChange={handleInputChange}
           />
         </div>
         <div className="bg-transparent border-2 p-2 px-4 rounded-full flex items-center gap-3">
@@ -29,6 +52,7 @@ const LoginPage: FC<LoginProps> = ({ toggleState }) => {
             placeholder="Enter your password"
             required
             className="bg-transparent outline-none"
+            onChange={handleInputChange}
           />
         </div>
         <div className="flex items-center w-full">
@@ -42,6 +66,7 @@ const LoginPage: FC<LoginProps> = ({ toggleState }) => {
             label="Login"
             className="bg-primary rounded-full p-2 px-10"
             buttonType="submit"
+            action={handleLogin}
           />
         </div>
       </form>

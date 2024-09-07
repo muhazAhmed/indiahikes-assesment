@@ -236,7 +236,7 @@ const RegisterPage: FC<RegisterProps> = ({ toggleState }) => {
         )}
       </form>
 
-      <div className="flex justify-evenly w-full">
+      <div className="flex justify-evenly w-full mb-4">
         <button
           type="button"
           onClick={prevStep}
